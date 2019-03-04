@@ -5,7 +5,7 @@ app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 });
 app.use(express.static(__dirname));
-var server = app.listen(8181);
+var server = app.listen(3000);
 var ws = io.listen(server);
 ws.on('connection', function(client){
     console.log('\033[96msomeone is connect\033[39m \n');
